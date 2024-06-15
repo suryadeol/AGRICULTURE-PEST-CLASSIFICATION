@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pest Description</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('static/images/background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5dc;
+            border: 10px solid black;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: red;
+            font-size: 24px;
+            margin-bottom: 20px;
+
+        }
+        p {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #444;
+            font-weight: bold;
+        }
+        .back-button {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ value }}</h1>
+        {% for item in data %}
+        <p>{{ item }}</p>
+        {% endfor %}
+        <form action="/information">
+            <button class="back-button" type="submit">Back</button>
+        </form>
+    </div>
+</body>
+</html>

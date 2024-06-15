@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('static/images/background.jpg'); /* Add background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+        }
+
+        .container {
+            max-width: 800px; /* Set maximum width */
+            margin: 0 auto; /* Center the container */
+            padding: 20px;
+            text-align: center; /* Center text inside container */
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        img {
+            display: block; /* Ensure the image is displayed as a block element */
+            margin: 0 auto; /* Center the image */
+            max-width: 100%; /* Make sure the image doesn't exceed its container width */
+            height: auto; /* Maintain aspect ratio */
+            border: 10px solid green; /* Add a border to the image */
+            border-radius: 8px; /* Add border radius for smoother edges */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow */
+        }
+
+        form {
+            text-align: center; /* Center the form */
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px; /* Add padding */
+            background-color: red; /* Set background color */
+            color: black; /* Set text color */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Add border radius */
+            cursor: pointer; /* Add cursor pointer on hover */
+            transition: background-color 0.3s ease; /* Add transition for smoother hover effect */
+            font-size: 16px; /* Set font size */
+            font-weight: bold; /* Make text bold */
+            text-transform: uppercase; /* Convert text to uppercase */
+            letter-spacing: 1px; /* Add letter spacing */
+        }
+
+        button:hover {
+            background-color: blue; /* Change background color on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Uploaded Pest Image</h1>
+        <!-- Use the file_path_g1 to construct the image source -->
+        <img src="/get_uploaded_image" alt="Uploaded Image">
+        <form action="/predict">
+            <button type="submit">Process Image</button>
+        </form>
+    </div>
+</body>
+</html>

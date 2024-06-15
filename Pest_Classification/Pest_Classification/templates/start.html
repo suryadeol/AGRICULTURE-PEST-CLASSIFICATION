@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Pest Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* Set background image */
+            background-image: url('static/images/welstart.jpg');
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            text-align: center;
+            color: #333; /* Text color */
+        }
+
+        #content-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5dc; /* Light agriculture background theme */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #circle-image {
+            border-radius: 10%; 
+            margin-top: 20px;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* This ensures the image stays within the circle */
+            border: 4px solid #4CAF50; /* Border color */
+            box-shadow: 0 16px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+        }
+
+        #circle-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10%; /* Maintain the circular shape */
+            object-fit: cover; /* Ensure the entire image is covered */
+        }
+
+        #steps {
+            text-align: left;
+            margin-top: 20px;
+            padding: 0 20px; /* Adjusted padding */
+        }
+
+        #steps ol {
+            list-style-type: none;
+            counter-reset: step-counter;
+        }
+
+        #steps li {
+            margin-bottom: 20px;
+        }
+
+        #steps li:before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="content-container">
+        <div id="content">
+            <div id="circle-image">
+                <img src="static/images/start.jpg" alt="Circle Image">
+            </div>
+            <div id="steps">
+                <h2>Guidelines for Farmers:</h2>
+                <ol>
+                    <li>
+                        <strong>Step 1: Upload Pest Image</strong><br>
+                        Click on the "Choose an image" button to select a photo of the pest affecting your crops. 
+                        Ensure that the image clearly shows the pest.
+                    </li>
+                    <li>
+                        <strong>Step 2: Submit Your Image</strong><br>
+                        After selecting the image, click on the "Submit" button to upload it to our system. 
+                        Please wait patiently while the image is being processed.
+                    </li>
+                    <li>
+                        <strong>Step 3: Pest Identification and Analysis</strong><br>
+                        Once the image is uploaded, our system will analyze it to identify the pest species and provide detailed information.
+                    </li>
+                    <li>
+                        <strong>Step 4: Pest Management Recommendations</strong><br>
+                        Based on the identified pest and its lifecycle stage, you will receive personalized pest management recommendations.
+                    </li>
+                </ol>
+            </div>
+            <form action="/start">
+                <button class="btn">Start Here</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
